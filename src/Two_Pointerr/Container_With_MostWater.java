@@ -13,12 +13,12 @@ public class Container_With_MostWater {
 	{
 		int start=0;
 		int end=height.length-1;
-		int sum=0;
+		int max_area=0;
 		
 		while(start<end)
 		{
 			int area= Math.min(height[start], height[end])*(end-start);
-			sum=Math.max(sum, area);
+			max_area=Math.max(max_area, area);
 			
 			if(height[start]<height[end])
 			{
@@ -31,7 +31,7 @@ public class Container_With_MostWater {
 			}
 		}
 		
-		return sum;
+		return max_area;
 	}
 
 }
