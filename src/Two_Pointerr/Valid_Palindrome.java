@@ -6,6 +6,14 @@ public class Valid_Palindrome {
 		
 		String s="Madam";
 		boolean sol=Solution(s);
+		if(sol)
+		{
+			System.out.println(s+" is a Valid Palindrome");
+		}
+		else
+		{
+			System.out.println(s+" is not a Valid Palindrome");
+		}
 	}
 
 	static boolean Solution(String s)
@@ -15,13 +23,18 @@ public class Valid_Palindrome {
 	   boolean isvalid=true;
 	   while(start<end)
 	   {
-	       if(s.charAt(start)==s.charAt(end))
+	       if(s.toLowerCase().charAt(start)==s.toLowerCase().charAt(end))
 	       {
 	    	   start++;
 	    	   end--;
 	       }
+	       
+	       else
+	       {
+	    	   return isvalid=false;
+	       }
 	   }
 		
-		return s;
+		return isvalid;
 	}
 }
