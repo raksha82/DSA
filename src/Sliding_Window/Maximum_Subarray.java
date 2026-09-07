@@ -3,7 +3,7 @@ package Sliding_Window;
 public class Maximum_Subarray {
 	public static void main(String[] args) {
 		
-		int[] a= {5,2,-1,0,8};
+		int[] a= {5,2,-1,0,3};
 		int k=3;
 		int result=Solution(a,k);
 		System.out.println(result);
