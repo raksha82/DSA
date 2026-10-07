@@ -13,7 +13,7 @@ public class Minimum {
 			}
 		}
 		
-		System.out.println("Max Value:"+min);
+		System.out.println("Min Value:"+min);
 		
 		int min2=Integer.MAX_VALUE;
 		
@@ -25,7 +25,7 @@ public class Minimum {
 			}
 		}
 		
-		System.out.println("Max Value:"+min2);
+		System.out.println("Min Value:"+min2);
 	}
 
 }
