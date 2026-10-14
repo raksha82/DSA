@@ -6,7 +6,14 @@ public class LeftRotatebyK {
 	
 	public static void main(String[] args) {
 		int[] a = {1, 2, 3, 4, 5};
-		int k = 2;
+		int k = 7;
+		
+		if (a.length == 0) {
+		    System.out.println(Arrays.toString(a));
+		    return;
+		}
+
+		k = k % a.length;
 		
 		
 		int start=0;
@@ -21,8 +28,10 @@ public class LeftRotatebyK {
 				end--;
 		}
 		
-		int start1=2;
-		int end1=k+2;
+		
+		
+		int start1=k;
+		int end1=a.length-1;
 		
 		while(start1<end1)
 		{
@@ -37,7 +46,7 @@ public class LeftRotatebyK {
 			
 				while(start2<end2)
 				{
-					System.out.println(start2+","+end2);
+				
 						int temp=a[start2];
 						a[start2]=a[end2];
 						a[end2]=temp;
