@@ -10,15 +10,46 @@ public class LeftRotatebyK {
 		
 		
 		int start=0;
-		int end=a.length-1;
+		int end=k-1;
 		
-		for(int i=0;i<k;i++)
+		while(start<end)
 		{
-			while(start<end)
-			{
-				
-			}
+				int temp=a[start];
+				a[start]=a[end];
+				a[end]=temp;
+				start++;
+				end--;
 		}
+		
+		int start1=2;
+		int end1=k+2;
+		
+		while(start1<end1)
+		{
+				int temp=a[start1];
+				a[start1]=a[end1];
+				a[end1]=temp;
+				start1++;
+				end1--;
+		}
+		int start2=0;
+		int end2=a.length-1;
+			
+				while(start2<end2)
+				{
+					System.out.println(start2+","+end2);
+						int temp=a[start2];
+						a[start2]=a[end2];
+						a[end2]=temp;
+						start2++;
+						end2--;
+				}
+			
+			
+		
+		
+		
+		System.out.println(Arrays.toString(a));
 		
 		
 	}
