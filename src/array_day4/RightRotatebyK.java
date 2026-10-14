@@ -7,7 +7,7 @@ public class RightRotatebyK {
 	public static void main(String[] args) {
 		
 		int a[]= {1,2,3,4,5};
-		int k=8;
+		int k=2;
 		
 		if(a.length==0)
 		{
@@ -17,7 +17,7 @@ public class RightRotatebyK {
 		
 		k=k%a.length;
 		
-		int start=0,end=k;
+		int start=0,end=a.length-1-k;
 		
 		while(start<end)
 		{
@@ -28,7 +28,7 @@ public class RightRotatebyK {
 				end--;
 		}
 		
-		int start1=k+1,end1=a.length-1;
+		int start1=a.length-k,end1=a.length-1;
 		
 		while(start1<end1)
 		{
