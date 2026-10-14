@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class LeftRotatebyK {
 	
 	public static void main(String[] args) {
-		int[] a = {};
+		int[] a = {1, 2, 3, 4, 5,6,7,8,9,10};
 		int k = 7;
 		
 		if (a.length == 0) {
