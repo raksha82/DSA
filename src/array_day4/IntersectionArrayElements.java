@@ -6,8 +6,8 @@ public class IntersectionArrayElements {
 
 	public static void main(String[] args) {
 		
-		int[] a = {1, 2, 3, 4, 5};
-		int[] b = {3, 4, 5, 6, 7};
+		int[] a = {1, 2, 2, 3};
+		int[] b = {2, 2, 4};
 		
 		
 		int[] result= new int[a.length];
@@ -19,8 +19,22 @@ public class IntersectionArrayElements {
 			{
 				if(a[i]==b[j])
 				{
-					result[start]=a[i];
-					start++;
+					if(a[i]==b[j])
+					{
+					for(int k=0;k<result.length;k++)
+					{
+					   if(a[i]==result[k])
+						   break;
+					}
+					}
+					
+					else
+					{
+						result[start]=a[i];
+						start++;
+					}
+					
+					
 				}
 			}
 		}
