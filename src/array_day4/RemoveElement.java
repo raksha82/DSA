@@ -20,6 +20,7 @@ public class RemoveElement {
 			}
 		}
 		
-		System.out.println(Arrays.toString(Arrays.copyOf(a, start)));
+		System.out.println(Arrays.toString(Arrays.copyOf(a, start)));  //creating the new array to show the result only
+		
 	}
 }
