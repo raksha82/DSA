@@ -6,21 +6,21 @@ public class MergeArray {
 	
 	public static void main(String[] args) {
 		
-		int[] a = {1, 2, 3};
-		int[] b = {4, 5, 6};
+		int[] a = {1, 3, 5};
+		int[] b = {7, 8, 9};
 		
 		int[] result= new int [a.length+b.length];
 		int m=0,n=0;
 		
-		for(int i=0;i<result.length-1;i++)
+		for(int i=0;i<result.length;i++)
 		{
-			if(a[m]==a.length && b[n]<b.length)
+			if(m==a.length && n<b.length)
 			{
 				result[i]=b[n];
 				n++;
 			}
 			
-			else if(b[n]==b.length && a[m]<a.length)
+			else if(n==b.length && m<a.length)
 			{
 				result[i]=a[m];
 				m++;
@@ -33,28 +33,19 @@ public class MergeArray {
 				m++;
 			}
 			
-			else if(a[m]>a[n])
+			else 
 			{
 				result[i]=b[n];
 				n++;
 			}
 			
-			else if(a[m]==a.length)
-			{
-				result[i]=b[n];
-				n++;
-			}
+		
 			
-			else
-			{
-				result[i]=a[m];
-				m++;
-			}
 			
-			System.out.println(Arrays.toString(result));
 			
 		}
 		
+		System.out.println(Arrays.toString(result));
 		
 	}
 
