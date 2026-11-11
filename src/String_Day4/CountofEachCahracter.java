@@ -23,7 +23,7 @@ public class CountofEachCahracter {
 
 		        if (a.charAt(i) == a.charAt(j)) {
 		            count++;
-		            visited[i]=true;
+		            visited[j]=true;
 		        }
 		    }
 
