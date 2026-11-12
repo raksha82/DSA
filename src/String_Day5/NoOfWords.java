@@ -5,12 +5,12 @@ public class NoOfWords {
 	public static void main(String[] args) {
 		
 		String s="Java is Easy to Leran";
-		int count=1;
+		int count=0;
 		
 		for(int i=0;i<s.length();i++)
 		{
 			
-			if(s.charAt(i) == ' ' && (i==0 || s.charAt(i-1) != ' ' ))
+			if(s.charAt(i) != ' ' && (i==0 || s.charAt(i-1) == ' ' ))
 			{
 				count++;
 				
