@@ -8,26 +8,33 @@ public class ReverseString {
 		
 		String s="Java is Easy";
 		
-		char[] ss=s.toCharArray();
+		String[] s1=s.split(" ");
 		
-		int start=0;
-		int end=ss.length-1;
+		System.out.println(Arrays.toString(s1));
 		
-		while(start<end)
+		for(int i=0;i<s1.length;i++)
 		{
-			char temp=ss[start];
-			ss[start]=ss[end];
-			ss[end] = temp;
+			char[] a=s1[i].toCharArray();
+			int start=0;
+			int end=a.length-1;
 			
-			start++;
-			end--;
+			while(start<end)
+			{
+				char temp=a[start];
+				a[start]=a[end];
+				a[end] = temp;
+				
+				start++;
+				end--;
+			}
+			
+			
+		  s1[i]=new String(a);
 		}
 		
-	    String n=new String(ss);
-	    System.out.println(n);
-		
-		
-		
+		String result = String.join(" ", s1);
+	
+		System.out.println(result); 
 		
 	}
 
