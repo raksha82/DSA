@@ -29,14 +29,17 @@ public class ValidPalindrome {
 					isPalindrome=false;
 					break;
 				}
+				
+				
+				start++;
+				end--;
 			}
 			
 			
 			
 			
 			
-			start++;
-			end--;
+			
 		}
 		
 		
