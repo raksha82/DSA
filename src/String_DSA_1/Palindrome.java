@@ -14,6 +14,7 @@ public class Palindrome {
 			if(s.charAt(start)!=s.charAt(end))
 			{
 				isPalindrome=false;
+				break;
 			}
 			
 			start++;
