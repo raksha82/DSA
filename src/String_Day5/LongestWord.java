@@ -19,7 +19,7 @@ public class LongestWord {
 			}
 		}
 		
-		int[] a=new int[count-1];
+		int[] a=new int[count];
 		int val=0;
 		int j=0;
 		
@@ -39,6 +39,9 @@ public class LongestWord {
 			
 		}
 		
+		a[a.length-1]=val;
+		
+		
 		int max=0;
 		int find=0;
 		
@@ -51,16 +54,45 @@ public class LongestWord {
 			}
 		}
 		
-		String[] s1=s.split(" ");
-		System.out.println(Arrays.toString(s1));
 		
-		for(int i=0;i<s1.length;i++)
+		int index=-1;
+		int start=-1;
+		
+		for(int i=0;i<s.length();i++)
 		{
-			if(i == find)
+			start++;
+			
+			if(s.charAt(i) != ' ' && (i==0 || s.charAt(i-1) == ' ' ))
 			{
-				System.out.println("Longest Word:"+s1[i]);
+				index++;
+				
+				
+			}
+			
+			else if(index == find) {
+				break;
+			}
+			
+		}
+		
+		String result="";
+		
+		for(int i=start-1;i<s.length();i++)
+		{
+			if(s.charAt(i) == ' ')
+			{
+				break;
+			}
+			
+			else
+			{
+				result += s.charAt(i);
 			}
 		}
+		
+		
+		System.out.println("Longest word in the Sentence:"+result);
+		System.out.println("Length of the word:"+a[index]);
 		
 		
 	}
